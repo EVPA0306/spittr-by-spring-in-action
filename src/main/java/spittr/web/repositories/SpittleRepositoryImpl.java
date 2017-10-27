@@ -13,15 +13,15 @@ import java.util.List;
  * Created by evgenypavlenko on 10/16/17.
  */
 
-//@Component
+@Component
 public class SpittleRepositoryImpl implements SpittleRepository {
 
-    //@Override
+    @Override
     public List<Spittle> findSpittles(Long max, int count) {
         return createSpittleList(count);
     }
 
-    //@Override
+    @Override
     public Spittle findOne(Long id) {
         return new Spittle(id,"Spittle " + id, LocalDateTime.now());
     }
@@ -34,13 +34,13 @@ public class SpittleRepositoryImpl implements SpittleRepository {
         return list;
     }
 
-    //@Override
+    @Override
     public Spittle save(Spittle spittle) {
         return new Spittle(1973L, "Evgeny", LocalDateTime.now());
         //throw new DuplicateSpittleException("The Spittle already exists");
     }
 
-    //@Override
+    @Override
     public List<Spittle> findAll() {
         List<Spittle> list = new ArrayList<>();
         for (int i = 0; i < 20; i++) {

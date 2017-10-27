@@ -6,7 +6,7 @@ import spittr.data.Spitter;
 /**
  * Created by evgenypavlenko on 10/16/17.
  */
-//@Component
+@Component
 public class SpitterRepositoryImpl implements SpitterRepository {
 
     private final static Spitter spitter;
@@ -22,12 +22,12 @@ public class SpitterRepositoryImpl implements SpitterRepository {
         );
     }
 
-    //@Override
+    @Override
     public Spitter save(Spitter unsaved) {
         return spitter;
     }
 
-    //@Override
+    @Override
     public Spitter findByUsername(String username) {
         return spitter;
     }
