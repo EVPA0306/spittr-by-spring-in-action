@@ -1,14 +1,15 @@
 package spittr.data;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.time.LocalDateTime;
 
 /**
  * Created by evgenypavlenko on 10/7/17.
  */
-//@Entity
+@Entity
 public class Spittle {
-    //@Id
+    @Id
     private Long id;
     private String message;
     private LocalDateTime time;

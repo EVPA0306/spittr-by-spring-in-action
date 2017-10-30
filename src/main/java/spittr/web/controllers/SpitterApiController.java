@@ -29,7 +29,7 @@ public class SpitterApiController {
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<Spitter> spitterById(@PathVariable Long id) {
-        Spitter spitter = repository.findById(id);
+        Spitter spitter = repository.findById(id).get();
         log.info("Executing REST-GET for {} ", spitter);
         HttpStatus status =  spitter != null ? HttpStatus.OK : HttpStatus.NOT_FOUND;
         return new ResponseEntity<Spitter>(spitter,status);

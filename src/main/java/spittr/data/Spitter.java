@@ -1,14 +1,15 @@
 package spittr.data;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 /**
  * Created by evgenypavlenko on 10/16/17.
  */
 
-//@Entity
+@Entity
 public class Spitter {
-
+    @Id
     private Long id;
     private String userName;
     private String firstName;
