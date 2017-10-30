@@ -14,9 +14,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static spittr.web.repositories.SpitterRepository.SQL_ALL_SPITTERS;
-import static spittr.web.repositories.SpitterRepository.SQL_INSERT_SPITTER;
-import static spittr.web.repositories.SpitterRepository.SQL_SELECT_SPITTER;
+import static spittr.web.repositories.SpitterRepository.*;
 
 /**
  * Created by evgenypavlenko on 10/16/17.

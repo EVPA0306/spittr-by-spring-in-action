@@ -1,9 +1,7 @@
 package spittr.web.repositories;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import spittr.data.Spittle;
-import spittr.exceptions.DuplicateSpittleException;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -14,14 +12,14 @@ import java.util.List;
  */
 
 @Component
-public class SpittleRepositoryImpl implements SpittleRepository {
+public class SpittleRepositoryJDBC implements SpittleRepository {
 
-    @Override
+    //@Override
     public List<Spittle> findSpittles(Long max, int count) {
         return createSpittleList(count);
     }
 
-    @Override
+    //@Override
     public Spittle findOne(Long id) {
         return new Spittle(id,"Spittle " + id, LocalDateTime.now());
     }
@@ -34,13 +32,13 @@ public class SpittleRepositoryImpl implements SpittleRepository {
         return list;
     }
 
-    @Override
+    //@Override
     public Spittle save(Spittle spittle) {
         return new Spittle(1973L, "Evgeny", LocalDateTime.now());
         //throw new DuplicateSpittleException("The Spittle already exists");
     }
 
-    @Override
+    //@Override
     public List<Spittle> findAll() {
         List<Spittle> list = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
